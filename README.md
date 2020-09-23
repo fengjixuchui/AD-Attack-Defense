@@ -68,6 +68,10 @@ This document was designed to be a useful, informational asset for those looking
 ------
 
 ## Privilege Escalation
+### Zerologon 
+* [CVE-2020-1472 POC](https://github.com/dirkjanm/CVE-2020-1472)
+* [Zerologon: instantly become domain admin by subverting Netlogon cryptography (CVE-2020-1472)](https://www.secura.com/blog/zero-logon)
+
 ### Passwords in SYSVOL & Group Policy Preferences
 * [Finding Passwords in SYSVOL & Exploiting Group Policy Preferences](https://adsecurity.org/?p=2288)
 * [Pentesting in the Real World: Group Policy Pwnage](https://blog.rapid7.com/2016/07/27/pentesting-in-the-real-world-group-policy-pwnage/)
@@ -355,6 +359,8 @@ Advanced Threat Protection and Advanced Threat Analytics](https://www.blackhat.c
 * [MailSniper](https://github.com/dafthack/MailSniper) - MailSniper is a penetration testing tool for searching through email in a Microsoft Exchange environment for specific terms (passwords, insider intel, network architecture information, etc.)
 * [LAPSToolkit](https://github.com/leoloobeek/LAPSToolkit) - Tool to audit and attack LAPS environments.
 * [CredDefense](https://github.com/CredDefense/CredDefense) - Credential and Red Teaming Defense for Windows Environments
+* [ldapdomaindump](https://github.com/dirkjanm/ldapdomaindump) - Active Directory information dumper via LDAP
+
 
 ## Ebooks
 * [The Dog Whisperer’s Handbook – A Hacker’s Guide to the BloodHound Galaxy](https://www.ernw.de/download/BloodHoundWorkshop/ERNW_DogWhispererHandbook.pdf)
@@ -404,6 +410,7 @@ Advanced Threat Protection and Advanced Threat Analytics](https://www.blackhat.c
 * [Get-ClrReflection](https://gist.github.com/dezhub/2875fa6dc78083cedeab10abc551cb58) - Detects memory-only CLR (.NET) modules.
 * [Get-InjectedThread](https://gist.github.com/jaredcatkinson/23905d34537ce4b5b1818c3e6405c1d2) - Get-InjectedThread looks at each running thread to determine if it is the result of memory injection.
 * [SilkETW](https://github.com/fireeye/SilkETW) - SilkETW & SilkService are flexible C# wrappers for ETW, they are meant to abstract away the complexities of ETW and give people a simple interface to perform research and introspection. 
+* [WatchAD](https://github.com/0Kee-Team/WatchAD) - AD Security Intrusion Detection System
 
 ### Sysmon Configuration
 * [sysmon-modular](https://github.com/olafhartong/sysmon-modular) - A Sysmon configuration repository for everybody to customise
@@ -479,6 +486,7 @@ Advanced Threat Protection and Advanced Threat Analytics](https://www.blackhat.c
 ### Important Security Updates
 |CVE|Title|Description|Link|
 |---|-----|-----------|----|
+|CVE-2020-1472|Netlogon Elevation of Privilege Vulnerability|An elevation of privilege vulnerability exists when an attacker establishes a vulnerable Netlogon secure channel connection to a domain controller, using the Netlogon Remote Protocol (MS-NRPC). An attacker who successfully exploited the vulnerability could run a specially crafted application on a device on the network.|https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2020-1472|
 |CVE-2019-1040|Windows NTLM Tampering Vulnerability|A tampering vulnerability exists in Microsoft Windows when a man-in-the-middle attacker is able to successfully bypass the NTLM MIC (Message Integrity Check) protection, aka 'Windows NTLM Tampering Vulnerability'.|https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2019-1040|
 |CVE-2019-0683|Active Directory Elevation of Privilege Vulnerability|An elevation of privilege vulnerability exists in Active Directory Forest trusts due to a default setting that lets an attacker in the trusting forest request delegation of a TGT for an identity from the trusted forest, aka 'Active Directory Elevation of Privilege Vulnerability'.|https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2019-0683|
 |CVE-2019-0708|Remote Desktop Services Remote Code Execution Vulnerability|A remote code execution vulnerability exists in Remote Desktop Services formerly known as Terminal Services when an unauthenticated attacker connects to the target system using RDP and sends specially crafted requests, aka 'Remote Desktop Services Remote Code Execution Vulnerability'.|https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2019-0708|
